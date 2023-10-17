@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "npm test",
-    "build-css": "tailwindcss build -i src/styles.css -o  public/styles.css"
+    "build-css": "tailwindcss build -i ./src/input.css -o  ./public/output.css --watch"
   },
   "author": "Mateusz Bocak",
   "license": "ISC",
