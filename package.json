@@ -1,0 +1,18 @@
+{
+  "name": "blog-site",
+  "version": "1.0.0",
+  "description": "Blog for my path in IT",
+  "main": "index.html",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "scripts": {
+    "test": "npm test",
+    "build-css": "tailwindcss build -i src/styles.css -o  public/styles.css"
+  },
+  "author": "Mateusz Bocak",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
