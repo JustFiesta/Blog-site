@@ -7,3 +7,9 @@
 .menu-icon {
     @apply mr-5 p-2 pl-8 pr-8 border-2 border-black bg-slate-100 rounded-lg shadow-menu-box-teal hover:shadow-menu-box-orange;
 }
+.enlarge-on-hover {
+    @apply transform transition duration-300 hover:scale-110;
+}
+.small-on-click {
+    @apply transform transition duration-300 hover:scale-90;
+}
