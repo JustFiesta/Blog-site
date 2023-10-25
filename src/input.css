@@ -13,3 +13,9 @@
 .small-on-click {
     @apply transform transition duration-300 hover:scale-90;
 }
+/* .post {
+    @apply
+}
+.read-more-btn {
+    @apply 
+} */

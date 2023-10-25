@@ -13,6 +13,8 @@
   "author": "Mateusz Bocak",
   "license": "ISC",
   "dependencies": {
-    "live-server": "^1.2.2"
+    "fs": "^0.0.1-security",
+    "live-server": "^1.2.2",
+    "marked": "^9.1.2"
   }
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My path in IT industry</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+<body class="h-screen w-screen bg-gradient-to-b from-grad-t to-grad-b font-lato">
+    <!-- główny kontener -->
+    <div class="h-screen flex flex-col">
+        <!-- kontener na menu -->
+        <menu class="flex items-start justify-center text-xl font-bold">
+            <ul class="flex items-center mt-5">
+                <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank"><li class=" enlarge-on-hover"><img src="images/kot.png" alt="cat-icon" width="50px" class="flex rounded-full border-1 border-black "></li></a>
+                <a href="index.html"><li class="ml-5 menu-icon enlarge-on-hover">HOME</li></a>
+                <a href="about-me.html"><li class="menu-icon enlarge-on-hover">ABOUT_ME</li></a>
+                <a href="blog.html"><li class="menu-icon enlarge-on-hover">BLOG</li></a>
+                <a href="https://github.com/JustFiesta" target="_blank"><li class="menu-icon enlarge-on-hover">GITHUB</li></a>
+                <a href="contact.html"><li class="mr-8 menu-icon enlarge-on-hover">CONTACT</li></a>
+                <a href=""><li class="enlarge-on-hover "><img src="images/search-white.png" alt="search-loop" width="30px" class="rounded"></li></a>
+            </ul>
+        </menu>
+
+        <!-- kontener na artykuły -->
+        <main class="flex flex-auto flex-col items-center justify-center text-neutral-200">
+            <!-- kontener na kategorie -->
+            <div>
+                <!-- pojedyncza kategoria/TAG -->
+                <div class="">
+                    <select name="categories" id="" class="text-slate-600">
+                        <option value="">LINUX</option>
+                        <option value="">DEVOPS</option>
+                        <option value="">NETWORK</option>
+                        <option value="">WINDOWS</option>
+                        <option value="">PROGRAMMING</option>
+                    </select>
+                </div>
+            </div>
+            <h1 class="text-6xl m-10 p-5">witaj na blogu czy cos</h1>
+
+            <hr class="bg-slate-500 text-slate-800 w-screen">
+
+            <!-- kontener na posty -->
+            <p>Recent Posts</p>
+            <div class="flex">
+                <!-- pojedynczy post -->
+                <div class="bg-white border-1 border-black m-10 relative">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-1 left-2 ">szacowany czas  czytania</span>
+                    <p class="font-bold">Temat: Lorem ipsum dolor sit amet</p>
+                    <a href="">Read More</a>
+                </div>
+                <div class="bg-white border-1 border-black m-10">
+                    <img src="" alt="draft-img">
+                    <p>szacowany czas  czytania</p>
+                    <p class="font-bold">Temat: Lorem ipsum dolor sit amet</p>
+                    <a href="">Read More</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- kontener na stopkę -->
+        <footer class="bottom-0 items-end">
+            <ul class="flex justify-center ">
+                <li class="p-3 enlarge-on-hover"><a target="_blank" href="https://www.linkedin.com/in/mateusz-bocak-331549244"><img src="images/icons8-linkedin-50.png" alt="linkedin-icon" width="50px"></a></li>
+                <li class="p-3 ml-4 enlarge-on-hover"><a target="_blank" href="https://github.com/JustFiesta"><img src="images/icons8-github-50.png" alt="github-icon" width="50px"></a></li>
+                <li class="p-3 ml-4 enlarge-on-hover"><a target="_blank" href="https://discordapp.com/users/460858124421562368"><img src="images/icons8-discord-50.png" alt="discord-icon" width="50px"></a></li>
+            </ul>
+
+            <!-- addnotacje -->
+            <div class="flex flex-col justify-center text-center">
+                <span class="p-3 flex flex-row justify-center text-center text-slate-600"><p>Copyright 2023</p>&nbsp; <p class="text-light-orange hover:text-cyan-300">&copy;</p> &nbsp; <p>Mateusz Bocak</p></span>
+                <div class="flex justify-center text-esm text-slate-600">
+                    <p><a target="_blank" href="https://icons8.com/icon/30888/discord">Discord</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>&nbsp;</p>
+                    <p><a target="_blank" href="https://icons8.com/icon/12599/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>&nbsp;</p>
+                    <p><a target="_blank" href="https://icons8.com/icon/30888/discord">Discord</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src=""></script>
+</body>
+</html>
