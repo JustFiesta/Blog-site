@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="output.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
-<body class="h-screen w-screen bg-gradient-to-b from-grad-t to-grad-b font-lato">
+<body class="h-full w-screen bg-gradient-to-b from-grad-t to-grad-b font-lato">
     <!-- główny kontener -->
-    <div class="h-screen flex flex-col">
+    <div class="flex flex-col">
         <!-- kontener na menu -->
         <menu class="flex items-start justify-center text-xl font-bold">
             <ul class="flex items-center mt-5">
@@ -24,7 +24,7 @@
         </menu>
 
         <!-- kontener na artykuły -->
-        <main class="flex flex-auto flex-col items-center justify-center text-neutral-200">
+        <main class="m-10 mb-0 flex flex-auto flex-col items-center justify-center text-neutral-200">
             <!-- kontener na kategorie -->
             <div>
                 <!-- pojedyncza kategoria/TAG -->
@@ -40,23 +40,103 @@
             </div>
             <h1 class="text-6xl m-10 p-5">witaj na blogu czy cos</h1>
 
-            <hr class="bg-slate-500 text-slate-800 w-screen">
-
             <!-- kontener na posty -->
-            <p>Recent Posts</p>
-            <div class="flex">
+            <div class="grid grid-cols-3">
                 <!-- pojedynczy post -->
-                <div class="bg-white border-1 border-black m-10 relative">
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
                     <img src="images/draft-img.png" alt="draft-img">
-                    <span class="absolute top-1 left-2 ">szacowany czas  czytania</span>
-                    <p class="font-bold">Temat: Lorem ipsum dolor sit amet</p>
-                    <a href="">Read More</a>
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
                 </div>
-                <div class="bg-white border-1 border-black m-10">
-                    <img src="" alt="draft-img">
-                    <p>szacowany czas  czytania</p>
-                    <p class="font-bold">Temat: Lorem ipsum dolor sit amet</p>
-                    <a href="">Read More</a>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="post-topic">Temat: Lorem ipsum dolor sit amet Temat: Lorem ipsum dolor sit amet Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div><div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div><div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
+                </div>
+
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="font-bold text-slate-800 w-full absolute top-48 bg-opacity-80 bg-neutral-200">Temat: Lorem ipsum dolor sit amet</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn small-on-click "><a href="">Read More</a></span>
                 </div>
             </div>
         </main>

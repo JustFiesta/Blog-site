@@ -18,6 +18,8 @@ module.exports = {
       boxShadow: {
         'menu-box-teal': '3px 3px #84fbe9',
         'menu-box-orange': '3px 3px #FF9F64',
+        'read-btn-teal': '3px 3px #84fbe9',
+        'read-btn-orange': '3px 3px #FF9F64',
       }
     },
     

@@ -10,12 +10,13 @@
 .enlarge-on-hover {
     @apply transform transition duration-300 hover:scale-110;
 }
-.small-on-click {
-    @apply transform transition duration-300 hover:scale-90;
+
+.post-topic {
+    @apply font-bold text-slate-800 w-full absolute top-44 bg-opacity-80 bg-neutral-200;
 }
-/* .post {
-    @apply
+.post-read-time {
+    @apply absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80;
 }
 .read-more-btn {
-    @apply 
-} */
+    @apply  border-2 border-black m-auto rounded-lg small-on-click p-2 pl-2 pr-2 border-2 font-bold border-slate-800 bg-slate-200 text-slate-800 rounded-lg shadow-read-btn-teal hover:shadow-menu-box-orange;
+}
