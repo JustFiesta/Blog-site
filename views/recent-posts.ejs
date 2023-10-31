@@ -1,12 +1,18 @@
 <p class="mt-5">Recent Posts: </p>
-            <div class="flex">
-                <!-- pojedynczy post -->
-                <% posts.forEach(posts => { %>
-                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-                    <img src="/public/images/draft-img.png" alt="draft-img">
-                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
-                    <p class="post-topic"><%= posts.title %></p><br>
-                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
-                </div>
-                <% }) %>
-            </div>
+<div class="flex">
+  <% const lastThreePosts = posts.slice(0, 3); %>
+  <% lastThreePosts.forEach((post) => { %>
+    <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+      <img src="<%= post.coverImage %>" alt="cover-image">
+      <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80">
+        <img src="/public/images/3201463-200.webp" width="25px" height="25px" alt="">
+        <p class="m-1 "><%= post.date.toLocaleDateString() %></p>
+      </span>
+      <p class="post-topic"><%= post.title %></p>
+      <br>
+      <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn">
+        <a href="/blog/post/<%= post.filename %>" target="_blank">Read More</a>
+      </span>
+    </div>
+  <% }); %>
+</div>

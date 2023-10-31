@@ -21,38 +21,18 @@
             <div class="grid grid-cols-3">
 
                 <!-- pojedynczy post -->
-                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-                    <img src="/public/images/draft-img.png" alt="draft-img">
-                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
-                    <p class="post-topic">tytuł</p><br>
-                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
-                </div>
-                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-                    <img src="/public/images/draft-img.png" alt="draft-img">
-                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
-                    <p class="post-topic">tytuł</p><br>
-                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
-                </div>
-                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-                    <img src="/public/images/draft-img.png" alt="draft-img">
-                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
-                    <p class="post-topic">tytuł</p><br>
-                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
-                </div>
-                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-                    <img src="/public/images/draft-img.png" alt="draft-img">
-                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
-                    <p class="post-topic">tytuł</p><br>
-                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
-                </div>
-                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-                    <img src="/public/images/draft-img.png" alt="draft-img">
-                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
-                    <p class="post-topic">tytuł</p><br>
-                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
-                </div>
-
+                <% let post_quantity = 5; %>
+                <% for(let i = 0; i <= post_quantity; i++) { %>
+                    <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                        <img src="/public/images/draft-img.png" alt="draft-img">
+                        <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.png" width="25px" height="25px" alt=""><p class="m-1 ">data</p></span>
+                        <p class="post-topic">tytuł</p><br>
+                        <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="/blog">Read More</a></span>
+                    </div>
+                
+                <% } %>
             </div>
+            <button type="button" class="load-more-btn"> Load More </button>
         </main>
 
         <%- include('footer'); %>

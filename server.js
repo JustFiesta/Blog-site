@@ -2,8 +2,10 @@ const express = require("express");
 const blogRouter = require("./routes/blog");
 const contactRouter = require("./routes/contact");
 const about_meRouter = require("./routes/about_me");
-const path = require("path");
-const req = require("express/lib/request");
+const fs = require('fs');
+const { marked } = require('marked');
+const path = require('path');
+const fm = require("front-matter");
 
 const app = express();
 const port = 3000;
@@ -22,27 +24,44 @@ app.use(about_meRouter)
 
 // home page route
 app.get("/", (req, res) => {
-  const posts = [
-    {
-    title: "lorem ipsum",
-    date: Date.now(),
-    description: "dolor sit amet"
-    },
-    {
-    title: "lorem ipsum 2",
-    date: Date.now(),
-    description: "dolor sit amet 2"
-    },
-    {
-    title: "lorem ipsum 3",
-    date: Date.now(),
-    description: "dolor sit amet 3"
+  const postsDir = path.join(__dirname, "public/posts");
+  const posts = [];
+
+  fs.readdirSync(postsDir).forEach((filename) => {
+    if (filename.endsWith(".md")) {
+      const postPath = path.join(postsDir, filename);
+      const content = fs.readFileSync(postPath, "utf8");
+      const post = fm(content);
+      posts.push({
+        title: post.attributes.title,
+        date: new Date(post.attributes.date),
+        excerpt: post.attributes.excerpt,
+        coverImage: `${post.attributes.cover_image}`,
+        content: marked(post.body), // Parsowanie treści Markdown
+      });
     }
-  ]
-  // render in index.ejs file variable named posts, witch contains all posts
-  res.render('index', { posts: posts });
+  });
+
+  // Sort posts by date in descending order
+  posts.sort((a, b) => b.date - a.date);
+
+  res.render("index", { posts: posts });
 });
 
+
+// //route for fetching posts by filename
+// app.get('/:filename', (req, res) => {
+//   const filename = req.params.filename
+//   const markdown = `public/posts/${filename}.md`
+//   fs.readFile(markdown, 'utf8', (err, data) => {
+//     if (err) {
+//       res.send('File not found')
+//     } else {
+//       const html = marked(data.toString())
+//       res.send(html)
+//     }
+//   })
+// })
 
 // prints a terminal message if server is working
 app.listen(port, () => {

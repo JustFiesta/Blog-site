@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.attributes.title %></title>
+    <link rel="stylesheet" href="/public/output.css">
+    <link rel="icon" type="image/x-icon" href="/public/images/kot.png" />
+</head>
+<body class="h-full w-screen bg-gradient-to-b from-grad-t to-grad-b font-lato">
+    <!-- główny kontener -->
+    <div class="h-full flex flex-col">
+        
+        <%- include('menu'); %>
+
+        <!-- kontener na treść posta -->
+        <main class="m-10 mb-0 flex flex-auto flex-col items-center justify-center text-neutral-200">
+            <h1 class="text-6xl m-10 p-5"><%= post.attributes.title %></h1>
+            <article class="text-xl m-10 p-5"><%= content %></article>
+        </main>
+
+        <%- include('footer'); %>
+    </div>
+    <script src=""></script>
+</body>
+</html>
