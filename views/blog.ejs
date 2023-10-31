@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My path in IT industry</title>
+    <link rel="stylesheet" href="../public/output.css">
+    <link rel="icon" type="image/x-icon" href="/public/images/kot.png" />
+</head>
+<body class="h-full w-screen bg-gradient-to-b from-grad-t to-grad-b font-lato">
+    <!-- główny kontener -->
+    <div class="h-full flex flex-col">
+        
+        <%- include('menu'); %>
+
+        <!-- kontener na artykuły -->
+        <main class="m-10 mb-0 flex flex-auto flex-col items-center justify-center text-neutral-200">
+
+            <h1 class="text-6xl m-10 p-5">witaj na blogu czy cos</h1>
+
+            <div class="grid grid-cols-3">
+
+                <!-- pojedynczy post -->
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="/public/images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="post-topic">tytuł</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="/public/images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="post-topic">tytuł</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="/public/images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="post-topic">tytuł</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="/public/images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="post-topic">tytuł</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
+                </div>
+                <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
+                    <img src="/public/images/draft-img.png" alt="draft-img">
+                    <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="30px" alt=""><p class="m-1 ">5-10min</p></span>
+                    <p class="post-topic">tytuł</p><br>
+                    <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="">Read More</a></span>
+                </div>
+
+            </div>
+        </main>
+
+        <%- include('footer'); %>
+    
+    </div>
+        
+    <script src=""></script>
+</body>
+</html>

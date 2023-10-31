@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My path in IT industry</title>
+    <link rel="stylesheet" href="../public/output.css">
+    <link rel="icon" type="image/x-icon" href="/public/images/kot.png" />
+</head>
+<body class="h-screen w-screen bg-gradient-to-b from-grad-t to-grad-b font-lato">
+    <!-- główny kontener -->
+    <div class="h-screen flex flex-col">
+        
+        <%- include('menu'); %>
+
+        <!-- kontener na artykuły -->
+        <main class="flex flex-auto flex-col items-center text-neutral-200">
+            <!-- header -->
+            <div>
+                <h1 class="text-6xl m-10 p-5 ">You can find me here:</h1>
+            </div>
+            <!-- contents -->
+            <div class="w-full h-full flex justify-center">
+                <article class="text-xl m-10 p-5">Dodaj tekst</article>
+            </div>
+        </main>
+
+        <%- include('footer'); %>
+    </div>
+    <script src=""></script>
+</body>
+</html>
