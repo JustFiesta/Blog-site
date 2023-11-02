@@ -8,37 +8,44 @@
     <link rel="icon" type="image/x-icon" href="/public/images/kot.png" />
 </head>
 <body class="h-full w-screen bg-gradient-to-b from-grad-t to-grad-b font-lato">
-    <!-- główny kontener -->
+    <!-- main container -->
     <div class="h-full flex flex-col">
         
         <%- include('menu'); %>
 
-        <!-- kontener na artykuły -->
+        <!-- article container -->
         <main class="m-10 mb-0 flex flex-auto flex-col items-center justify-center text-neutral-200">
 
             <h1 class="text-6xl m-10 p-5">witaj na blogu czy cos</h1>
 
             <div class="grid grid-cols-3">
 
-                <!-- pojedynczy post -->
-                <% let post_quantity = 5; %>
-                <% for(let i = 0; i <= post_quantity; i++) { %>
+                <!-- single post -->
+                <% const renderedPosts = posts.slice(0, maxPosts); %>
+                <% renderedPosts.forEach((post) => { %>
                     <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-                        <img src="/public/images/draft-img.png" alt="draft-img">
-                        <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.png" width="25px" height="25px" alt=""><p class="m-1 ">data</p></span>
-                        <p class="post-topic">tytuł</p><br>
-                        <span class="p-5 border-2 border-black m-auto rounded-lg read-more-btn "><a href="/blog">Read More</a></span>
+                        <img height="300px" width="400px" src="<%= post.coverImage %>" alt="cover-image">
+                        <span class="p-1 absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80"><img src="/public/images/3201463-200.webp" width="25px" height="25px" alt=""><p class="m-1 "><%= post.date.toLocaleDateString() %></p></span>
+                        <p class="post-topic"><%= post.title %></p><br>
+                        <span><a class="p-5 border-2 border-black m-auto rounded-lg read-more-btn " href="/blog/<%= post.filename %>">Read More</a></span>
                     </div>
+                <% }) %>
                 
-                <% } %>
             </div>
-            <button type="button" class="load-more-btn"> Load More </button>
+            <form action="" method="post">
+                <input class="load-more-btn" type="submit" value="Load More">
+            </form>
         </main>
 
-        <%- include('footer'); %>
     
     </div>
         
-    <script src=""></script>
+    <script>
+        console.log('Client-side code running');
+
+        function loadMorePosts(){
+            last
+        }
+    </script>
 </body>
 </html>

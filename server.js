@@ -27,9 +27,10 @@ app.get("/", (req, res) => {
   const postsDir = path.join(__dirname, "public/posts");
   const posts = [];
 
-  fs.readdirSync(postsDir).forEach((filename) => {
-    if (filename.endsWith(".md")) {
-      const postPath = path.join(postsDir, filename);
+  fs.readdirSync(postsDir).forEach((file) => {
+
+    if (file.endsWith(".md")) {
+      const postPath = path.join(postsDir, file);
       const content = fs.readFileSync(postPath, "utf8");
       const post = fm(content); // getting front matter from markdown
       posts.push({
@@ -38,6 +39,7 @@ app.get("/", (req, res) => {
         excerpt: post.attributes.excerpt,
         coverImage: `${post.attributes.cover_image}`,
         content: marked(post.body), // parsing markdown body
+        filename: path.parse(file).name
       });
     }
   });
@@ -49,9 +51,9 @@ app.get("/", (req, res) => {
 });
 
 // 404 route - it fires for every single request if nothing above fires first
-app.use((req, res) => {
-  res.status(404).render("404.ejs");
-})
+// app.use((req, res) => {
+//   res.status(404).render("404.ejs");
+// })
 
 // Listens for requests and prints a terminal message if server is working
 app.listen(port, () => {
