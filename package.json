@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "npm test",
-    "build-css": "tailwindcss build -i ./src/input.css -o  ./public/output.css --watch",
-    "dev-start": "node install && nodemon server.js"
+    "tailwind": "tailwindcss build -i ./src/input.css -o  ./public/output.css --watch",
+    "dev": "npm i && nodemon server.js"
   },
   "author": "Mateusz Bocak",
   "license": "ISC",
