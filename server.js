@@ -65,5 +65,5 @@ app.get("/", (req, res) => {
 
 // prints a terminal message if server is working
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
+  console.log(`Blog app listening on port ${port}!`);
 });
