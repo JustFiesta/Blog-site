@@ -48,7 +48,7 @@ app.get("/", (req, res) => {
   res.render("index", { posts: posts });
 });
 
-// 404 route
+// 404 route - it fires for every single request if nothing above fires first
 app.use((req, res) => {
   res.render("404.ejs");
 })
