@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
     if (filename.endsWith(".md")) {
       const postPath = path.join(postsDir, filename);
       const content = fs.readFileSync(postPath, "utf8");
-      const post = fm(content); // getting front matter fron markdown
+      const post = fm(content); // getting front matter from markdown
       posts.push({
         title: post.attributes.title, // getting front matter
         date: new Date(post.attributes.date),
@@ -48,22 +48,12 @@ app.get("/", (req, res) => {
   res.render("index", { posts: posts });
 });
 
+// 404 route
+app.use((req, res) => {
+  res.render("404.ejs");
+})
 
-// //route for fetching posts by filename
-// app.get('/:filename', (req, res) => {
-//   const filename = req.params.filename
-//   const markdown = `public/posts/${filename}.md`
-//   fs.readFile(markdown, 'utf8', (err, data) => {
-//     if (err) {
-//       res.send('File not found')
-//     } else {
-//       const html = marked(data.toString())
-//       res.send(html)
-//     }
-//   })
-// })
-
-// prints a terminal message if server is working
+// Listens for requests and prints a terminal message if server is working
 app.listen(port, () => {
   console.log(`Blog app listening on port ${port}!`);
 });

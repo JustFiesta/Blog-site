@@ -3,8 +3,8 @@
   <% const lastThreePosts = posts.slice(0, 3); %>
   <% lastThreePosts.forEach((post) => { %>
     <div class="bg-neutral-100 border-1 border-black relative text-center rounded-lg m-3 text-slate-300">
-      <img src="<%= post.coverImage %>" alt="cover-image">
-      <span class="absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80">
+      <img height="300px" width="400px" src="<%= post.coverImage %>" alt="cover-image">
+      <span class="p-1 absolute top-2 left-2 bg-neutral-200 text-black rounded-full flex items-center bg-opacity-80">
         <img src="/public/images/3201463-200.webp" width="25px" height="25px" alt="">
         <p class="m-1 "><%= post.date.toLocaleDateString() %></p>
       </span>
