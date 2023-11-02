@@ -9,7 +9,7 @@
   "scripts": {
     "test": "npm test",
     "build-css": "tailwindcss build -i ./src/input.css -o  ./public/output.css --watch",
-    "dev-start": "nodemon server.js"
+    "dev-start": "node install && nodemon server.js"
   },
   "author": "Mateusz Bocak",
   "license": "ISC",
@@ -19,7 +19,6 @@
     "front-matter": "^4.0.2",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
-    "live-server": "^1.2.2",
     "marked": "^9.1.4",
     "tailwind": "^4.0.0"
   }

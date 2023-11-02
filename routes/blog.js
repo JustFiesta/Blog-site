@@ -5,7 +5,7 @@ const { marked } = require("marked");
 const path = require("path");
 const fm = require("front-matter");
 
-router.get('/post/:filename', (req, res) => {
+router.get('/blog/posts/:filename', (req, res) => {
     const filename = req.params.filename;
     const markdownPath = `public/posts/${filename}.md`;
   
@@ -22,5 +22,5 @@ router.get('/blog', (req, res) => {
     res.render('blog');
 })
 
-// we can now use router in all of our module
+// we can now use router in all of our modules
 module.exports = router

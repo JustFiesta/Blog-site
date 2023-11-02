@@ -31,13 +31,13 @@ app.get("/", (req, res) => {
     if (filename.endsWith(".md")) {
       const postPath = path.join(postsDir, filename);
       const content = fs.readFileSync(postPath, "utf8");
-      const post = fm(content);
+      const post = fm(content); // getting front matter fron markdown
       posts.push({
-        title: post.attributes.title,
+        title: post.attributes.title, // getting front matter
         date: new Date(post.attributes.date),
         excerpt: post.attributes.excerpt,
         coverImage: `${post.attributes.cover_image}`,
-        content: marked(post.body), // Parsowanie treści Markdown
+        content: marked(post.body), // parsing markdown body
       });
     }
   });
