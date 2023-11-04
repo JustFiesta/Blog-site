@@ -51,9 +51,10 @@ app.get("/", (req, res) => {
 });
 
 // 404 route - it fires for every single request if nothing above fires first
-// app.use((req, res) => {
-//   res.status(404).render("404.ejs");
-// })
+app.use((req, res) => {
+  res.status(404)
+  res.render("404");
+})
 
 // Listens for requests and prints a terminal message if server is working
 app.listen(port, () => {

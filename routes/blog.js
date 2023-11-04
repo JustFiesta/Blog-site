@@ -75,7 +75,9 @@ router.get('/blog/:filename', (req, res) => {
   fs.readFile(markdownPath, 'utf8', (err, data) => {
     if (err) {
       console.log('File not found');
-      res.status(404).send('File not found');
+      res.render('404');
+      res.status(404);
+
     } else {
       const post = fm(data);
     
@@ -83,7 +85,6 @@ router.get('/blog/:filename', (req, res) => {
     }
   });
 });
-
 
 // we can now use router in all of our modules
 module.exports = router
