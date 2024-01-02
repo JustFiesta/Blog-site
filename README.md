@@ -1,7 +1,7 @@
 # Documentation
 
 This is the documentation for my private blog site.  
-Repository contains documentation site, and the GitHub Actions workflows that generate the site itself.
+Repository contains documentation site, and site itself.
 
 <hr>
 
